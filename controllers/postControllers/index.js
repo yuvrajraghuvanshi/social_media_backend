@@ -63,7 +63,6 @@ const likePost=async(req,res)=>{
        res.status(200).json("The post has been disliked")
     }}
     catch(err){
-        console.log({err});
         res.status(500).json(err)
     }
 }
@@ -88,7 +87,6 @@ const getPostTimeline=async(req,res)=>{
     const friendPosts= await Promise.all(currentUser.followings.map((friendId)=>{
         return Post.find({userId:friendId})
     }))
-     
         res.json(userPosts.concat(...friendPosts))
    }
     catch(err){
