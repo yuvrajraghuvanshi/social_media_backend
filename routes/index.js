@@ -10,7 +10,7 @@ router.use('/',authRoutes)
 
 router.use('/update',userRoute);
 router.use('/delete',userRoute);
-router.use('/get',userRoute);
+router.use('/users',userRoute);
 
 
 

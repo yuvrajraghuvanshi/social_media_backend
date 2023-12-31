@@ -4,6 +4,6 @@ const router=require('express').Router();
 
 router.put('/:id',updateController);
 router.delete('/:id',deleteController);
-router.get('/:id',getController);
+router.get('/',getController);
 
 module.exports=router
