@@ -55,12 +55,8 @@ const authController = async (req, res) => {
     //   { expiresIn: "1h" }
     // );
     const token= generateJwtToken(  { username, findUserId: findUser.id },'24h')
-
-    res.status(200).json({findUser,
-      token,
-      // _id: findUser.id,
-      // username: findUser.username,
-    });
+  
+    res.status(200).json(findUser);
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Internal server error" });
