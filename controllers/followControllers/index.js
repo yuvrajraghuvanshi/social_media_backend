@@ -15,7 +15,7 @@ const followController=async(req,res)=>{
         }
     }
     catch(err){
-        console.err(err)
+       console.log(err)
         res.status(500).json(err)
     }
    }
